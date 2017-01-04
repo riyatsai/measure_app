@@ -6,9 +6,9 @@ if(window.DeviceOrientationEvent) {
           	alpha = event.alpha,
           	beta = event.beta,
           	gamma = event.gamma;
-			a.innerHTML = alpha;
-			b.innerHTML = beta;
-			g.innerHTML = gamma;
+			a.innerHTML = Math.round(alpha);
+			b.innerHTML = Math.round(beta);
+			g.innerHTML = Math.round(gamma);
 		},false);
 }else{
     document.querySelector('body').innerHTML = '你的瀏覽器不支援';
