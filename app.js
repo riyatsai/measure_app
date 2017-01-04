@@ -22,8 +22,8 @@ function handleMotionEvent(event) {
     accelerationY = event.accelerationIncludingGravity.y,
     accelerationZ = event.accelerationIncludingGravity.z;
 	x.innerHTML = accelerationX.toFixed(4);
-	y.innerHTML = accelerationY.toFixed(4);
-	z.innerHTML = accelerationZ.toFixed(4);
+	y.innerHTML = accelerationY.toFixed(2);
+	z.innerHTML = accelerationZ.toFixed(2);
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
