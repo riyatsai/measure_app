@@ -27,13 +27,13 @@ function handleMotionEvent(event) {
 	
 	var x2 = document.getElementById('x2'),
 	y2 = document.getElementById('y2'),
-    z2 = document.getElementById('z2'),
-    accelerationX2 = event.acceleration.x,
-    accelerationY2 = event.acceleration.y,
-    accelerationZ2 = acceleration.z;
-	x2.innerHTML = accelerationX2.toFixed(2);
-	y2.innerHTML = accelerationY2.toFixed(2);
-	z2.innerHTML = accelerationZ2.toFixed(2);
+	    z2 = document.getElementById('z2'),
+	    accelerationX2 = event.acceleration.x,
+	    accelerationY2 = event.acceleration.y,
+	    accelerationZ2 = event.acceleration.z;
+	x2.innerHTML = accelerationX2;
+	y2.innerHTML = accelerationY2;
+	z2.innerHTML = accelerationZ2;
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
