@@ -3,13 +3,13 @@ if(window.DeviceOrientationEvent) {
 		var a = document.getElementById('alpha'),
 			b = document.getElementById('beta'),
           	g = document.getElementById('gamma'),
-          	alpha = event.webkitCompassHeading,
+          	alpha = event.alpha,
           	beta = event.beta,
           	gamma = event.gamma;
-			a.innerHTML = alphat.toFixed(4);
-			b.innerHTML = beta.toFixed(4);
-			g.innerHTML = gamma.toFixed(4);
+			a.innerHTML = alpha;
+			b.innerHTML = beta;
+			g.innerHTML = gamma;
 		},false);
 }else{
-    document.querySelector('body').innerHTML = '不支援';
+    document.querySelector('body').innerHTML = '你的瀏覽器不支援';
 }
