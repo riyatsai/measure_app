@@ -24,6 +24,16 @@ function handleMotionEvent(event) {
 	x.innerHTML = accelerationX.toFixed(2);
 	y.innerHTML = accelerationY.toFixed(2);
 	z.innerHTML = accelerationZ.toFixed(2);
+	
+	var x2 = document.getElementById('x2'),
+	y2 = document.getElementById('y2'),
+    z2 = document.getElementById('z2'),
+    accelerationX2 = event.acceleration.x,
+    accelerationY2 = event.acceleration.y,
+    accelerationZ2 = acceleration.z;
+	x2.innerHTML = accelerationX2.toFixed(2);
+	y2.innerHTML = accelerationY2.toFixed(2);
+	z2.innerHTML = accelerationZ2.toFixed(2);
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
