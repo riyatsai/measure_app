@@ -3,7 +3,7 @@ if(window.DeviceOrientationEvent) {
 		var a = document.getElementById('alpha'),
 			b = document.getElementById('beta'),
           	g = document.getElementById('gamma'),
-          	alpha = event.alpha,
+          	alpha = event.webkitCompassHeading,
           	beta = event.beta,
           	gamma = event.gamma;
 			a.innerHTML = Math.round(alpha);
