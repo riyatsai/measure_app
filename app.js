@@ -21,7 +21,7 @@ function handleMotionEvent(event) {
     accelerationX = event.accelerationIncludingGravity.x,
     accelerationY = event.accelerationIncludingGravity.y,
     accelerationZ = event.accelerationIncludingGravity.z;
-	x.innerHTML = accelerationX.toFixed(4);
+	x.innerHTML = accelerationX.toFixed(2);
 	y.innerHTML = accelerationY.toFixed(2);
 	z.innerHTML = accelerationZ.toFixed(2);
 }
