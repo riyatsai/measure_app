@@ -11,7 +11,7 @@ if(window.DeviceOrientationEvent) {
 			g.innerHTML = gamma.toFixed(2);
 		},false);
 }else{
-    document.querySelector('body').innerHTML = '你的瀏覽器不支援';
+    document.querySelector('body').innerHTML = '不支援';
 }
 
 function handleMotionEvent(event) {
