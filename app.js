@@ -46,7 +46,7 @@ function handleMotionEvent(event) {
 	if(window.trigger){
 		if(window.second%2==0 && !window.st){
 			window.st = true;
-			window.magicZ[window.second/2] = accelerationZ2.toFixed(4);
+			window.magicZ[window.second/2] = [accelerationZ2.toFixed(4),event.interval];
 			window.st = false;
 		}
 	}
