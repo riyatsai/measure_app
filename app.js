@@ -1,3 +1,11 @@
+(function(){
+	window.trigger = false;
+	window.magicZ  = [];
+	window.myVar;
+	window.second = 0;
+	window.st = false;
+})();
+
 if(window.DeviceOrientationEvent) {
 	window.addEventListener('deviceorientation', function(event) {
 		var a = document.getElementById('alpha'),
@@ -21,9 +29,9 @@ function handleMotionEvent(event) {
     accelerationX = event.accelerationIncludingGravity.x,
     accelerationY = event.accelerationIncludingGravity.y,
     accelerationZ = event.accelerationIncludingGravity.z;
-	x.innerHTML = accelerationX.toFixed(2);
-	y.innerHTML = accelerationY.toFixed(2);
-	z.innerHTML = accelerationZ.toFixed(2);
+	x.innerHTML = accelerationX.toFixed(4);
+	y.innerHTML = accelerationY.toFixed(4);
+	z.innerHTML = accelerationZ.toFixed(4);
 	
 	var x2 = document.getElementById('x2'),
 	y2 = document.getElementById('y2'),
@@ -31,9 +39,36 @@ function handleMotionEvent(event) {
 	    accelerationX2 = event.acceleration.x,
 	    accelerationY2 = event.acceleration.y,
 	    accelerationZ2 = event.acceleration.z;
-	x2.innerHTML = accelerationX2.toFixed(2);
-	y2.innerHTML = accelerationY2.toFixed(2);
-	z2.innerHTML = accelerationZ2.toFixed(2);
+	x2.innerHTML = accelerationX2.toFixed(4);
+	y2.innerHTML = accelerationY2.toFixed(4);
+	z2.innerHTML = accelerationZ2.toFixed(4);
+	
+	if(window.trigger){
+		if(window.second%2==0 && !window.st){
+			window.st = true;
+			window.magicZ[window.second/2] = accelerationZ2.toFixed(4);
+			window.st = false;
+		}
+	}
+	
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
+
+
+
+function tap(){
+	window.trigger = !window.trigger;
+	window.myVar = setInterval(myTimer ,500);
+	if(!window.trigger){
+		$('#hahaha').html(JSON.stringfy(window.magicZ));
+		clearInterval(window.myVar);
+		window.second = 0;
+		window.magicZ = [];
+	}
+}
+
+function myTimer(){
+	window.second++;
+	$('#hahaha').html(window.second);
+}
