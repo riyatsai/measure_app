@@ -34,7 +34,7 @@ function handleMotionEvent(event) {
 	z.innerHTML = accelerationZ.toFixed(4);
 	
 	var x2 = document.getElementById('x2'),
-	y2 = document.getElementById('y2'),
+		y2 = document.getElementById('y2'),
 	    z2 = document.getElementById('z2'),
 	    accelerationX2 = event.acceleration.x,
 	    accelerationY2 = event.acceleration.y,
@@ -77,3 +77,4 @@ function myTimer(){
 	window.second++;
 	$('#time').html(window.second);
 }
+window.addEventListener("devicemotion", handleMotionEvent, true);
