@@ -23,7 +23,7 @@ if(window.DeviceOrientationEvent) {
 }
 
 function handleMotionEvent(event) {
-	var x = document.getElementById('x'),
+/*	var x = document.getElementById('x'),
 	y = document.getElementById('y'),
     z = document.getElementById('z'),
     accelerationX = event.accelerationIncludingGravity.x,
@@ -41,12 +41,12 @@ function handleMotionEvent(event) {
 	    accelerationZ2 = event.acceleration.z;
 	x2.innerHTML = accelerationX2.toFixed(4);
 	y2.innerHTML = accelerationY2.toFixed(4);
-	z2.innerHTML = accelerationZ2.toFixed(4);
+	z2.innerHTML = accelerationZ2.toFixed(4);*/
 	
 	if(window.trigger){
 		if(window.second%2==0 && !window.st){
 			window.st = true;
-			window.magicZ[window.second/2] = accelerationZ2.toFixed(4);
+			window.magicZ[window.second/2] = 1;//accelerationZ2.toFixed(4);
 			window.st = false;
 		}
 	}
@@ -58,6 +58,7 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 
 function tap(){
+	console.log(window.trigger);
 	if(window.trigger==false){
 		window.trigger = true;
 		window.myVar = setTimeout(myTimer ,500);
