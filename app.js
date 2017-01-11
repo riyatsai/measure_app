@@ -72,5 +72,5 @@ function tap(){
 
 function myTimer(){
 	window.second++;
-	$('#hahaha').html(window.second);
+	$('#time').html(window.second);
 }
