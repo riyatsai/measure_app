@@ -60,13 +60,13 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 function start(){
 	if(window.trigger==false){
 		window.trigger = true;
-		window.myVar = setTimeout(myTimer ,500);
+		window.myVar = setInterval(myTimer ,500);
 	}
 }
 function stop(){
 	if(window.trigger==true){
 		$('#hahaha').html(JSON.stringify(window.magicZ));
-		clearTimeout(window.myVar);
+		clearInterval(window.myVar);
 		window.second = 0;
 		window.magicZ = [];
 		window.trigger= false;
