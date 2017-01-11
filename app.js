@@ -58,9 +58,11 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 
 function tap(){
-	window.trigger = !window.trigger;
-	window.myVar = setInterval(myTimer ,500);
-	if(!window.trigger){
+	if(window.trigger==false){
+		window.trigger = true;
+		window.myVar = setInterval(myTimer ,500);
+	}
+	if(window.trigger==true){
 		$('#hahaha').html(JSON.stringfy(window.magicZ));
 		clearInterval(window.myVar);
 		window.second = 0;
