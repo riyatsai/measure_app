@@ -64,10 +64,11 @@ function tap(){
 		window.myVar = setTimeout(myTimer ,500);
 	}
 	if(window.trigger==true){
-		$('#hahaha').html(JSON.stringfy(window.magicZ));
+		$('#hahaha').html(JSON.stringify(window.magicZ));
 		clearTimeout(window.myVar);
 		window.second = 0;
 		window.magicZ = [];
+		window.trigger= false;
 	}
 }
 
