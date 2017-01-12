@@ -1,3 +1,16 @@
+if("geolocation" in navigator) {
+}
+else {
+	alert("不支援");
+}
+if("geolocation" in navigator) {
+	navigator.geolocation.getCurrentPosition(function(position) {
+		console.log(position);
+		var GPSlocation = document.getElementById('GPSlocation');
+		GPSlocation.innerHTML = position;
+	});
+}
+
 (function(){
 	window.trigger = false;
 	window.magicZ  = [];
@@ -5,8 +18,6 @@
 	window.second = 0;
 	window.st = false;
 })();
-
-
 if(window.DeviceOrientationEvent) {
 	window.addEventListener('deviceorientation', function(event) {
 		var a = document.getElementById('alpha'),
