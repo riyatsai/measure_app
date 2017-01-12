@@ -6,6 +6,7 @@
 	window.st = false;
 })();
 
+
 if(window.DeviceOrientationEvent) {
 	window.addEventListener('deviceorientation', function(event) {
 		var a = document.getElementById('alpha'),
@@ -32,7 +33,7 @@ function handleMotionEvent(event) {
 	x.innerHTML = accelerationX.toFixed(4);
 	y.innerHTML = accelerationY.toFixed(4);
 	z.innerHTML = accelerationZ.toFixed(4);
-	
+
 	var x2 = document.getElementById('x2'),
 		y2 = document.getElementById('y2'),
 	    z2 = document.getElementById('z2'),
@@ -42,7 +43,7 @@ function handleMotionEvent(event) {
 	x2.innerHTML = accelerationX2.toFixed(4);
 	y2.innerHTML = accelerationY2.toFixed(4);
 	z2.innerHTML = accelerationZ2.toFixed(4);
-	
+
 	if(window.trigger){
 		if(window.second%2==0 && !window.st){
 			window.st = true;
@@ -50,7 +51,7 @@ function handleMotionEvent(event) {
 			window.st = false;
 		}
 	}
-	
+
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
@@ -70,7 +71,7 @@ function stop(){
 		window.second = 0;
 		window.magicZ = [];
 		window.trigger= false;
-	}	
+	}
 }
 
 function myTimer(){
