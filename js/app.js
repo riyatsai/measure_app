@@ -81,7 +81,7 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 function start(){
 	if(window.trigger==false){
 		window.trigger = true;
-		window.myVar = setInterval(myTimer ,500);
+		window.myVar = setInterval(myTimer ,16.6666);
 	}
 }
 function stop(){
