@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>cameraPreviewSample</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrapV3.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div class="aim"><label>+</label></div>
+    <div class="main">
+      <header>擷取資料</header>
+      <article>
+      </br>location:<span id="GPSlocation"></span>
+      </br>
+      Orientation</br>
+      alpha:<span id="alpha"></span></br>
+      beta:<span id="beta"></span></br>
+      gamma:<span id="gamma"></span></br>
+      </br>
+      Acceleration IncludingGravity</br>
+      X:<span id="x"></span></br>
+      Y:<span id="y"></span></br>
+      Z:<span id="z"></span></br>
+      </br>
+      Acceleration</br>
+      X:<span id="x2"></span></br>
+      Y:<span id="y2"></span></br>
+      Z:<span id="z2"></span></br>
+      <div id="time"></div>
+      </br></br>
+      <div id="hahaha"></div>
+      <button class="btn btn-warning" onclick="start()">start</button>
+      <button class="btn btn-warning" onclick="stop()">stop</button>
+      </article>
+      <footer>
+        <button class="btn btn-g" id="startCameraBelowButton">Start Camera</button>
+        <button class="btn btn-g" id="stopCameraButton">Stop Camera</button>
+        <button class="btn btn-g" id="takePictureButton">Take Picture</button>
+      </footer>
+      <div class="pictures"><p><img id="originalPicture" width="200"/></p></div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="CameraPreview.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/gyroscope.js"></script>
+  </body>
+</html>
